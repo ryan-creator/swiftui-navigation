@@ -16,9 +16,9 @@ public struct NavigationViewStack<V>: View where V: View {
 
     @State private var destinationValue: (any Hashable)?
 
-    @ViewBuilder private let content: () -> V
+    private let content: () -> V
 
-    public init(content: @escaping () -> V) {
+    public init(@ViewBuilder content: @escaping () -> V) {
         self.content = content
     }
 
